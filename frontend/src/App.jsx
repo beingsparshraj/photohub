@@ -54,6 +54,12 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    if (user === null) {
+      navigate('/login');
+    }
+  }, [user]);
+
+  useEffect(() => {
     if (user) {
       const socketio = io('http://localhost:8000', {
         query: {
