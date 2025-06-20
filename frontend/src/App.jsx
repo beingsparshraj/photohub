@@ -54,11 +54,7 @@ function App() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (user === null) {
-      navigate('/login');
-    }
-  }, [user]);
+  
 
   useEffect(() => {
     if (user) {
