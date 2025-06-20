@@ -10,6 +10,7 @@ const useGetUserProfile = (userId) => {
     useEffect(() => {
         const fetchUserProfile = async () => {
             try {
+                if (!userId) return;
                 const res = await axios.get(`https://photohub-f03x.onrender.com/api/v1/user/${userId}/profile`, { withCredentials: true });
                 if (res.data.success) { 
                     dispatch(setUserProfile(res.data.user));
