@@ -17,7 +17,7 @@ const ChatPage = () => {
 
     const sendMessageHandler = async (receiverId) => {
         try {
-            const res = await axios.post(`${process.env.URL}/api/v1/message/send/${receiverId}`, { textMessage }, {
+            const res = await axios.post(`https://photohub-f03x.onrender.com/api/v1/message/send/${receiverId}`, { textMessage }, {
                 headers: {
                     'Content-Type': 'application/json'
                 },
